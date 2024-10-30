@@ -80,7 +80,8 @@ body {
 /* Ana Bölüm */
 section {
     min-height: 100vh;
-    padding: 10rem 9% 2rem;
+    padding: 5rem 9% 2rem;
+    margin-top: -50px; /* Üstten boşluk eklemek için */
 }
 
 /* Education Bölümü */
@@ -203,23 +204,34 @@ section {
 }
 
 @media (max-width: 462px) {
-    .education {
-        padding: 10rem 4% 5rem;
+    .promo-banner {
+        padding: 8px 15px;
+        font-size: 10px;
+        margin-top: 20px;
+        width: 95%;
+        max-width: 400px;
     }
-    .footer {
-        flex-direction: column-reverse;
+
+    .promo-banner .promo-icon {
+        font-size: 10px;
     }
-    .footer p {
-        margin-top: 2rem;
-        text-align: center;
+
+    .promo-banner .promo-text {
+        font-size: 14px;
+        margin-right: 5px;
+    }
+
+    .promo-banner .countdown {
+        font-size: 4px; /* Sayaç boyutunu daha da küçülttük */
     }
 }
 
 @media (max-width: 371px) {
-    .home {
-        justify-content: center;
+    .promo-banner .countdown {
+        font-size: 3px; /* Daha küçük ekranlar için sayaç boyutunu daha da küçültüyoruz */
     }
 }
+
 
 /* Animasyonlar */
 @keyframes homeBgText {
@@ -254,4 +266,40 @@ section {
     100% {
         width: 0;
     }
+}
+
+/* Promo Banner Styles */
+.promo-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    color: #3f3b6c;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 20px auto;
+    width: 90%;
+    margin-top: 60px; /* Üstten boşluk eklemek için */
+    max-width: 1000px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.promo-banner .promo-icon {
+    color: #7a5aff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.promo-banner .promo-text {
+    margin-right: 8px;
+}
+
+.promo-banner .countdown {
+    color: hsl(273, 96%, 50%); /* Kırmızımsı renk */
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 10px;
 }
